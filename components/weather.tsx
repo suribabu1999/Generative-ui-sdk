@@ -14,12 +14,12 @@ const getWeatherIcon = (weather: string) => {
   return '🌤️';
 };
 
-export const Weather = ({ temperature, weather, location }: WeatherProps) => {
+export  const Weather = ({ temperature, weather, location }: WeatherProps) => {
   const icon = getWeatherIcon(weather);
 
   return (
     <div className="w-full max-w-sm rounded-2xl border bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-      {/* Header */}
+
       <div className="mb-3 flex items-center justify-between">
         <h2 className="text-sm font-semibold text-neutral-600 dark:text-neutral-400">
           🌍 Weather
@@ -27,12 +27,12 @@ export const Weather = ({ temperature, weather, location }: WeatherProps) => {
         <span className="text-xs text-neutral-400">Live</span>
       </div>
 
-      {/* Location */}
+
       <div className="mb-2 text-lg font-bold text-neutral-900 dark:text-neutral-100">
         {location}
       </div>
 
-      {/* Main */}
+
       <div className="flex items-center gap-4">
         <div className="text-4xl">{icon}</div>
 
@@ -46,7 +46,6 @@ export const Weather = ({ temperature, weather, location }: WeatherProps) => {
         </div>
       </div>
 
-      {/* Footer */}
       <div className="mt-4 text-xs text-neutral-400">
         Updated just now
       </div>
